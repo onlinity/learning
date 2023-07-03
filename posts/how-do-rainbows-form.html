@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="post-style.css">
+    <link rel="shortcut icon" href="brand-images/icon.png">
+    <meta name="description" content="Welcome to Onlinity Learning.">
+    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning">
+    <title>Onlinity Learning - Post</title>
+</head>
+<body>
+
+    <div class="showbox" id="preload">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav>
+            <a href="https://learning.onlinity.tk/"><img src="brand-images/Learning logo.svg" alt="logo"></a>
+            <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
+            <div id="menu">
+                <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
+                <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
+                <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
+            </div>
+        </nav>
+    
+        <section id="recent">
+            <img src="images/rainbow.jpg" alt="rainbow" id="recentImg">
+            <div id="recentContent">
+                <div id="details">
+                    <p>July 3, 2023</p>
+                    <p>Pavle Ignjatović</p>
+                </div>
+                <h1>How and why do rainbows form?</h1>
+                <p id="recentDesc">Behind one of the most colorful events in nature stands nothing more than couple of physics laws, 
+                    but some people still do not understand them completelly. If you are among them, I am sure that you will be able 
+                    to explain this phenomenon in just a few minutes.</p>
+            </div>
+        </section>
+
+        <article>Let's remember some foreknowledge, first. We all know that for the formation
+            of a rainbow sun and rain are needed, and that it will not form in the absence
+            of either of them. So, formation has something to do with the light passing through water. 
+            <br>Because water is denser then air, light passing through raindrop slows down and changes
+            direction, exiting at different angle. This is called <b>refraction</b>. 
+            Sunlight (which appears white to us) is made of different colors, each with its own wavelength, 
+            and slowing by different amounts. This leads to <b>dispersion</b> - process of separating white light to 
+            all colors of visible spectrum (red, orange, yellow, green, blue, indigo, and violet). 
+        </article>
+
+        <section class="special">
+            <div class="imageWrap">
+                <img src="images/refraction.png" alt="refraction">
+                <p>Refraction. Credits: https://www.metoffice.gov.uk/weather/learn-about/weather/optical-effects/rainbows/how-are-rainbows-formed</p>
+            </div>
+            <p class="specialText">The image shows simplified process of dispersion - separating colors of visible spectrum from white light, with reflection being just light "bouncing" of the drop from the inside. </p>
+        </section>
+
+        <article>
+            After this happens, when standing in the right place, an observer may see refracted
+            and dispersed light, forming the rainbow. Arc's center stands in the <b>antisolar point</b> - point directly oppsite the sun. 
+            Different colours exit the droplets at angles
+            that vary by around two degrees from red (with the longest wavelength, around 650 nanometers)
+            to violet (with the shortest wavelength, around 400 nanometers), so red will be the first, and violet the last 
+            color on the rainbow. Ultrared and ultraviolet light can also be found in
+            it, but human eye cannot register these wavelengths. <br><br>
+            Interesting things to notice:
+            <ul>
+                <li>If an observer is att high enough altitude, his antisolar point is also raised from the ground. That leads to the rainbow forming 
+                    as a full circle!
+                </li>
+                <li>As no two humans can stand in the same place, they can not have the same antisolar point, 
+                    so their rainbows are in different places. This means that if you see the rainbow, no one 
+                    else can see the same one, it is only yours!</li>
+            </ul>
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/360-rainbow.jpg" alt="full rainbow">
+                <p>Circular rainbow. Credits: https://science.howstuffworks.com/nature/climate-weather/atmospheric/rainbows-are-circular.htm</p>
+            </div>
+            
+        </section>
+
+        <article class="keywords">
+            <b>Key words:</b><br>
+            <ul>
+                <li>refraction - changing light's direction and speed when ambience density changes</li>
+                <li>reflection - light bouncing of a surface</li>
+                <li>dispersion - separating colors that make up white light</li>
+                <li>antisolar point - point directly oposite to the sun</li>
+            </ul>
+        </article>
+
+        <footer>
+            <div class="media">
+                <a href="https://pavle.tk/"><i class="fa-solid fa-user"></i></a>
+                <a target="_blank" href="mailto:onlinitylearning@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://twitter.com/onlinityLearn/"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+            <p>Copyright © 2023 Pavle Ignjatović, Onlinity learning</p>
+          </footer>
+    </div>
+
+
+
+    <script>
+        let content = document.getElementById('wrap')
+        content.style.display = 'none'
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            content.style.display = 'block'
+        })
+
+
+
+
+        var navLinks = document.getElementById("menu")
+    
+        function showmenu(){
+            navLinks.style.display = "block"
+            navLinks.style.animation = "menuopen 1s"
+        }
+
+        function hidemenu(){
+            navLinks.style.animation = "menuclose 1s"
+            setTimeout(() => {
+                navLinks.style.display = 'none'
+            }, 900);
+        }
+    </script>
+</body>
+</html>

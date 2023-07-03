@@ -29,59 +29,31 @@
             <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
             <div id="menu">
                 <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
-                <a href="#"><p>The most recent article</p></a>
-                <a href="#"><p>Contact</p></a>
-                <a href="#"><p>About us</p></a>
+                <a href="#" id="mostRecentLink"><p>The most recent article</p></a>
+                <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
+                <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
             </div>
         </nav>
     
         <section id="recent">
-            <img src="image.jpg" alt="image" id="recentImg">
+            <img src="" alt="rainbow" id="recentImg">
             <div id="recentContent">
                 <div id="details">
-                    <p>August 15, 2023</p>
+                    <p>July 3, 2023</p>
                     <p>Pavle Ignjatović</p>
                 </div>
-                <a href="#"><h1>This is title for the most recent article.</h1></a>
-                <p id="recentDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" id="mostRecentTitle"><h1 id="mostRecentTitleText">This is title for the most recent article.</h1></a>
+                <p id="recentDesc">Behind one of the most colorful events in nature stands nothing more than couple of physics laws, 
+                    but some people still do not understand them completelly. If you are among them, I am sure that you will be able 
+                    to explain this phenomenon in just a few minutes.</p>
             </div>
         </section>
 
         <section id="articles">
             <div class="article">
-                <a href="">
-                    <img src="image.jpg" alt="img">
-                    <p>This is title for another article.</p>
-                </a>
-            </div>
-            <div class="article">
-                <a href="">
-                    <img src="image.jpg" alt="img">
-                    <p>This is title for another article.</p>
-                </a>
-            </div>
-            <div class="article">
-                <a href="">
-                    <img src="image.jpg" alt="img">
-                    <p>This is title for another article.</p>
-                </a>
-            </div>
-            <div class="article">
-                <a href="">
-                    <img src="image.jpg" alt="img">
-                    <p>This is title for another article.</p>
-                </a>
-            </div>
-            <div class="article">
-                <a href="">
-                    <img src="image.jpg" alt="img">
-                    <p>This is title for another article.</p>
-                </a>
-            </div>
-            <div class="article">
-                <a href="">
-                    <img src="image.jpg" alt="img">
-                    <p>This is title for another article.</p>
+                <a href="posts/how-do-rainbows-form.html" id="mostRecent">
+                    <img src="posts/images/rainbow.jpg" alt="rainbow" id="recentArticleImage">
+                    <p id="recentArticleTitle">How and why do rainbows form?</p>
                 </a>
             </div>
         </section>
@@ -123,6 +95,20 @@
                 navLinks.style.display = 'none'
             }, 900);
         }
+
+
+
+        let recent = document.getElementById('mostRecent').href
+        let recentTitle = document.getElementById('mostRecentTitle')
+        recentTitle.href = recent
+        let recentLink = document.getElementById('mostRecentLink')
+        recentLink.href = recent
+
+        let recentImage = document.getElementById('recentArticleImage').src
+        let recentImg = document.getElementById('recentImg')
+        recentImg.src = recentImage
+
+        document.getElementById('mostRecentTitleText').innerHTML = document.getElementById('recentArticleTitle').innerHTML
     </script>
 </body>
 </html>

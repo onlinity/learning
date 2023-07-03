@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="about-style.css">
+    <link rel="shortcut icon" href="icon.png">
+    <meta name="description" content="Welcome to Onlinity Learning.">
+    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning">
+    <title>Onlinity Learning - About us</title>
+</head>
+<body>
+
+    <div class="showbox" id="preload">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav>
+            <a href="https://learning.onlinity.tk/"><img src="Learning logo.svg" alt="logo"></a>
+            <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
+            <div id="menu">
+                <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
+                <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
+                <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
+            </div>
+        </nav>
+
+        <div class="step" id="research">
+            <img src="about photos/research.svg">
+            <p>In the beginning, we do research to make sure all information is 100% correct.</p>
+        </div>
+
+        <a href="#writing"><i class="fa-solid fa-chevron-down fa-2xl arrow"></i></a>
+
+        <div class="step" id="writing">
+            <img src="about photos/writing.svg">
+            <p>Then, we assemble all that into a blog post which is easy to read and follow.</p>
+        </div>
+
+        <a href="#posting"><i class="fa-solid fa-chevron-down fa-2xl arrow"></i></a>
+
+        <div class="step" id="posting">
+            <img src="about photos/posting.svg">
+            <p>After that, post is published, and all followers notified.</p>
+        </div>
+
+        <a href="#reading"><i class="fa-solid fa-chevron-down fa-2xl arrow"></i></a>
+
+        <div class="step" id="reading">
+            <img src="about photos/reading.svg">
+            <p>From then on, article is available around-the-clock for people all across the globe...</p>
+        </div>
+
+        <a href="#question"><i class="fa-solid fa-chevron-down fa-2xl arrow"></i></a>
+
+        <div class="step" id="question">
+            <img src="about photos/question.svg">
+            <p>...to learn things which seemed too difficult and too hard.</p>
+        </div>
+    
+
+        <footer>
+            <div class="media">
+                <a href="https://pavle.tk/"><i class="fa-solid fa-user"></i></a>
+                <a target="_blank" href="mailto:onlinitylearning@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://twitter.com/onlinityLearn/"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+            <p>Copyright © 2023 Pavle Ignjatović, Onlinity learning</p>
+          </footer>
+    </div>
+
+
+
+    <script>
+        let content = document.getElementById('wrap')
+        content.style.display = 'none'
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            content.style.display = 'block'
+        })
+
+
+
+
+        var navLinks = document.getElementById("menu")
+    
+        function showmenu(){
+            navLinks.style.display = "block"
+            navLinks.style.animation = "menuopen 1s"
+        }
+
+        function hidemenu(){
+            navLinks.style.animation = "menuclose 1s"
+            setTimeout(() => {
+                navLinks.style.display = 'none'
+            }, 900);
+        }
+    </script>
+</body>
+</html>
