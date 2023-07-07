@@ -353,6 +353,10 @@ body{
         font-size: 1.1rem;
         line-height: 150%;
     }
+
+    .article a p{
+        max-width: 18.18rem;
+    }
 }
 
 
