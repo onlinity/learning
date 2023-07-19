@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="post-style.css">
+    <link rel="shortcut icon" href="brand-images/icon.png">
+    <meta name="description" content="Welcome to Onlinity Learning.">
+    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning, moon">
+    <title>Onlinity Learning - About the Moon</title>
+</head>
+<body>
+
+    <div class="showbox" id="preload">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav>
+            <a href="https://learning.onlinity.tk/"><img src="brand-images/Learning logo.svg" alt="logo"></a>
+            <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
+            <div id="menu">
+                <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
+                <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
+                <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
+            </div>
+        </nav>
+    
+        <section id="recent">
+            <img src="images/moon.jpg" alt="moon" id="recentImg">
+            <div id="recentContent">
+                <div id="details">
+                    <p>July 20, 2023</p>
+                    <p>Pavle Ignjatović</p>
+                </div>
+                <h1>The Moon</h1>
+                <p id="recentDesc">
+                    The Moon is Earth's only natural satellite, the brightest object in night sky, the only place in the universe (except the Earth) where humans have set foot, and the subject of the large amount of research.                </p>
+            </div>
+        </section>
+
+        <article>
+            <h2>Formation</h2>
+            Scientists are not completely sure what caused creation of the Moon, but 
+            the leading theory suggests that 4.5 billion years ago Mars-sized body collided with 
+            Earth, sending debris in the orbit around it. Within around 100 million years, 
+            molten rocks finally crystallized, creating our natural satelite 384,000km (239,000mi) away.
+
+            <h2>Movement</h2>
+            The Moon is rotating, revolving around the Earth, and with Earth around the Sun at the 
+            same time. As its rotation rate and rate of revolving around the Earth are same, 
+            we always face the same side of it. That <b>synchronous rotation</b> causes what we call "phases". 
+            When the side we face is completely illuminated by the Sun, it's a "full moon", and when that is 
+            the case with the opposite side, it's a "new moon".
+
+            <h2>Structure and surface</h2>
+            Structure of the Moon is divided into three parts: <b>core</b>, <b>mantle</b> and <b>crust</b>. <br>
+            The core is primarily made of iron, both in solid and liquid state. The mantle contains minerals, 
+            like olivine and pyroxene, made of magnesium, iron, silicon and oxygen. The top layer, crust, is similar 
+            to the mantle, but also contains aluminium, titanium, uranium, thorium, potassium and hydrogen. <br><br>
+            As the Moon has no atmosphere, it is constantly exposed to the strikes that leave numerous craters. One 
+            of the biggest is Tycho crater, with 85km (52mi) in width. Those strikes are the reason why the surface is 
+            covered with dust. <br>
+            Another consequence of lack of atmosphere is range of temperatures on the surface, a lot bigger than on Earth. 
+            It reaches 127°C (260°F) on the sunny side, and -173°C (-280°F) on the dark side.
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/moon-craters.jpg" alt="moon's craters">
+                <p>Craters on the Moon's surface.</p>
+            </div>
+        </section>
+
+        <article>
+            <h2>Some interesting facts:</h2>
+            <ul>
+                <li>Our natural satellite was called "The Moon" because at the time we had not found any other moons. First ones were discovered by Galileo Galilei in 1610.</li>
+                <li>The Moon is the second densest satellite, after Jupiter's satellite Io.</li>
+                <li>The Moon is moving around 3.8cm away from the Earth every year.</li>
+            </ul>
+        </article>
+
+        <br>
+
+        <footer>
+            <div class="media">
+                <a href="https://pavle.tk/"><i class="fa-solid fa-user"></i></a>
+                <a target="_blank" href="mailto:onlinitylearning@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://twitter.com/onlinityLearn/"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+            <p>Copyright © 2023 Pavle Ignjatović, Onlinity learning</p>
+          </footer>
+    </div>
+
+
+
+    <script>
+        let content = document.getElementById('wrap')
+        content.style.display = 'none'
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            content.style.display = 'block'
+        })
+
+
+
+
+        var navLinks = document.getElementById("menu")
+    
+        function showmenu(){
+            navLinks.style.display = "block"
+            navLinks.style.animation = "menuopen 1s"
+        }
+
+        function hidemenu(){
+            navLinks.style.animation = "menuclose 1s"
+            setTimeout(() => {
+                navLinks.style.display = 'none'
+            }, 900);
+        }
+    </script>
+</body>
+</html>
