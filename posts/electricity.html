@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="post-style.css">
+    <link rel="shortcut icon" href="brand-images/icon.png">
+    <meta name="description" content="Welcome to Onlinity Learning.">
+    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning, electricity, generation, distribution, power grid, power">
+    <title>Onlinity Learning - Electricity</title>
+</head>
+<body>
+
+    <div class="showbox" id="preload">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav>
+            <a href="https://learning.onlinity.tk/"><img src="brand-images/Learning logo.svg" alt="logo"></a>
+            <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
+            <div id="menu">
+                <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
+                <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
+                <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
+            </div>
+        </nav>
+    
+        <section id="recent">
+            <img src="images/power-grid.jpg" alt="power grid" id="recentImg">
+            <div id="recentContent">
+                <div id="details">
+                    <p>July 24, 2023</p>
+                    <p>Pavle Ignjatović</p>
+                </div>
+                <h1>How do we get electricity?</h1>
+                <p id="recentDesc">
+                    Life in the modern world can not be imagined without phones, internet, lightbulbs and many other things we use on a daily basis, 
+                    and all of them have one thing in common - they need electricity. Let's see the path of that power on its way to us.
+                </p>
+            </div>
+        </section>
+
+        <article>
+            <h2>Generation</h2>
+            The first step of this process is creating electricity. As energy cannot be created or destroyed (First law of thermodynamics), 
+            another form of energy has to be transformed into electric power. This is done in <b>power plants</b>. Since it is too expensive to 
+            store large amounts of electricity, almost all of the power we use is created moments ago, potentially thousands of kilometers away. 
+            Therefore, one of the biggest challenges is instantly meeting a frequently changing demand of the grid. <br>
+            To do this, different energy sources are layered on top of each other, ones on the bottom being those which are not designed to turn 
+            on and off quickly, and ones at the top being those that can connect to grid in minutes. That bottom layer are usually nuclear combined with 
+            coal power plants. Together, they fulfill a base-load, minimum amount of energy needed during the day. When the demand exceeds base-load, 
+            other sources are activated. These sources are ones in the top layer, easy to switch on when needed, usually gas-powered and hydroelectric plants. <br>
+            Of course, renewable sources of energy (like solar and wind plants) are also in use, but due to their unreliability, they are mostly used 
+            in places where storage units can be profitable.
+
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/dam.jpg" alt="dam">
+                <p>Hydroelectric dam.</p>
+            </div>
+        </section>
+
+        <article>
+            <h2>Transmission</h2>
+            Once energy is generated, it needs to be delivered to consumers. Due to the high cost of construction, not every part of country has 
+            its own power plant. That means that the energy has to be transmitted to further distances, converting itself to heat along the way. 
+            To lower this loss as much as possible, energy is converted to higher voltage in <b>transformers</b>. Along the way, this hight-voltage 
+            power encounters several substations, each time lowering voltage and getting closer to its destination. Finally, when voltage is around 220V, 
+            it gets to our homes.
+        </article>
+
+        <br>
+
+        <footer>
+            <div class="media">
+                <a href="https://pavle.tk/"><i class="fa-solid fa-user"></i></a>
+                <a target="_blank" href="mailto:onlinitylearning@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://twitter.com/onlinityLearn/"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+            <p>Copyright © 2023 Pavle Ignjatović, Onlinity learning</p>
+          </footer>
+    </div>
+
+
+
+    <script>
+        let content = document.getElementById('wrap')
+        content.style.display = 'none'
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            content.style.display = 'block'
+        })
+
+
+
+
+        var navLinks = document.getElementById("menu")
+    
+        function showmenu(){
+            navLinks.style.display = "block"
+            navLinks.style.animation = "menuopen 1s"
+        }
+
+        function hidemenu(){
+            navLinks.style.animation = "menuclose 1s"
+            setTimeout(() => {
+                navLinks.style.display = 'none'
+            }, 900);
+        }
+    </script>
+</body>
+</html>
