@@ -9,9 +9,7 @@
     <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon.png">
-    <meta name="description" content="Welcome to Onlinity Learning.">
-    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning">
-    <title>Onlinity Learning</title>
+    <title>Article not ready</title>
 </head>
 <body>
 
@@ -29,7 +27,7 @@
             <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
             <div id="menu">
                 <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
-                <a href="#" id="mostRecentLink"><p>The most recent article</p></a>
+                <a href="#" id="mostRecentLink_NotReady"><p>The most recent article</p></a>
                 <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
                 <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
             </div>
@@ -78,20 +76,12 @@
                 navLinks.style.display = 'none'
             }, 900);
         }
+    </script>
+    
+    <script type="module">
+        import {recent} from "../recentArticle.js"
 
-
-
-        let recent = document.getElementById('mostRecent').href
-        let recentTitle = document.getElementById('mostRecentTitle')
-        recentTitle.href = recent
-        let recentLink = document.getElementById('mostRecentLink')
-        recentLink.href = recent
-
-        let recentImage = document.getElementById('recentArticleImage').src
-        let recentImg = document.getElementById('recentImg')
-        recentImg.src = recentImage
-
-        document.getElementById('mostRecentTitleText').innerHTML = document.getElementById('recentArticleTitle').innerHTML
+        document.getElementById('mostRecentLink_NotReady').href = '../' + recent
     </script>
 </body>
 </html>
