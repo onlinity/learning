@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon.png">
+    <script src="script.js" defer type="module"></script>
     <meta name="description" content="Welcome to Onlinity Learning.">
     <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning">
     <title>Onlinity Learning</title>
@@ -50,7 +51,7 @@
 
         <section id="articles">
             <div class="article">
-                <a href="posts/electricity.html" id="mostRecent">
+                <a href="" id="mostRecent">
                     <img src="posts/images/power-grid.jpg" alt="power-grid" id="recentArticleImage">
                     <p id="recentArticleTitle">How do we get electricity?</p>
                 </a>
@@ -125,17 +126,7 @@
 
 
 
-        let recent = document.getElementById('mostRecent').href
-        let recentTitle = document.getElementById('mostRecentTitle')
-        recentTitle.href = recent
-        let recentLink = document.getElementById('mostRecentLink')
-        recentLink.href = recent
-
-        let recentImage = document.getElementById('recentArticleImage').src
-        let recentImg = document.getElementById('recentImg')
-        recentImg.src = recentImage
-
-        document.getElementById('mostRecentTitleText').innerHTML = document.getElementById('recentArticleTitle').innerHTML
+        
     </script>
 </body>
 </html>
