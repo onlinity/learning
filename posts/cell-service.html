@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="post-style.css">
+    <link rel="shortcut icon" href="brand-images/icon.png">
+    <meta name="description" content="Welcome to Onlinity Learning.">
+    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning, electricity, generation, distribution, power grid, power">
+    <title>Onlinity Learning - How does cell service work</title>
+</head>
+<body>
+
+    <div class="showbox" id="preload">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav>
+            <a href="https://learning.onlinity.tk/"><img src="brand-images/Learning logo.svg" alt="logo"></a>
+            <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
+            <div id="menu">
+                <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
+                <a href="" id="mostRecentLink"><p>The most recent article</p></a>
+                <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
+                <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
+            </div>
+        </nav>
+    
+        <section id="recent">
+            <img src="images/telecommunications.jpg" alt="telecommunications" id="recentImg">
+            <div id="recentContent">
+                <div id="details">
+                    <p>July 28, 2023</p>
+                    <p>Pavle Ignjatović</p>
+                </div>
+                <h1>How does cell service work?</h1>
+                <p id="recentDesc">
+                    Mobile phones, equipped with instruments for calling and accessing the internet, became unavoidable tools for various tasks 
+                    in everyday life. Despite that, not so many people actually know how they work.
+                </p>
+            </div>
+        </section>
+
+        <article>
+            <h2>Electromagnetic waves</h2>
+            Regardless of whether it's using the internet or calling someone, cell phone has to transmit signals wirelessly. This is done using 
+            electromagnetic radiation. <br>
+            We know that waves have couple of properties, main ones being amplitude and wavelength. Let's look into the last one. <br> 
+            When wavelength is between 400 and 700 nanometers, that wave represents a color in white light, i.e. visible spectrum of light
+            (more about visible spectrum in our article about rainbows at <a href="./how-do-rainbows-form.html">THIS LINK</a> ). <br> 
+            When wavelength is below 400nm, that wave has much more energy, and can pass through some less dense materials. Those can be X-rays, 
+            used to see inside a human body. <br>
+            Lastly, when wavelength exceeds 700nm, it is considered radio wave. These waves are able to travel bigger distances and 
+            bend around objects, so they have all usefull properties for their use in comunication. To achieve that, we need a way to manipulate their 
+            properties and carry information.
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/electromagnetic-spectrum.jpg" alt="electromagnetic spectrum">
+                <p>Parts of electromagnetic spectrum. Credits: https://www.differenttruths.com/science-technology/how-was-electromagnetic-radiation-radio-waves-discovered/</p>
+            </div>
+        </section>
+
+        <article>
+            <h2>Manipulating amplitude and wavelength</h2>
+            One way to transmit information via radio waves if by changing their amplitude (or "strength") on some places, 
+            depending on the transmitted value. This is known as AM (amplitude modulation). This communication has advantages - it can 
+            work on long distances, and it is simplier - but also huge drawback, as it is extremelly susceptible to interferences. <br>
+            Other way is by changing their wavelength (frequency), known as FM (frequency modulation). This method is far more reliable, hence 
+            used more often.
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/wave-properties.jpg" alt="wave properties">
+                <p>Amplitude and wavelength. Credits: https://pressbooks.bccampus.ca/kpupsyc1100/chapter/waves-and-wavelengths/</p>
+            </div>
+        </section>
+
+        <article>
+            <h2>Transmission</h2>
+            Now we know how information is "packed" into waves, but which form does that information travel in? Since sending original audio 
+            signal is inefficient, it is converted into binary sequence. In that sequence, higher amplitude or wavelength can represent 1, and 
+            lower represent 0. <br>
+            To make it even more efficient, reciever can distinguish between different phases of a wave connected to each other. One phase (full wave cycle) 
+            can start at the midpoint going upward, second at the midpoint going downward, third starting at the peak (crest) and fourth starting 
+            at the trough. Then, each of these can get binary value (00, 01, 10 or 11) asigned to it. This way we can pack twice as much data into the same 
+            wave. When each of these is represented in higher and lower amplitude, we quadripple amount of data. It doesn't have to stop there, so 
+            some of the most advanced computers can process up to 32 768 combinations, in 15-digit binary sequences. <br>
+            When signal is ready, it is sent to the reciever via cell sites.
+
+            <h2>Cell sites</h2>
+            Cell sites are consisted of multiple towers and instruments for modulating (converting data to signal in radio wave) and demodulating 
+            (converting signal to sound or text). In order to enable access to these towers everywhere, land is splitted into hexagons, each having 
+            a cell site in its center. Additionally, signals from these sites reach far enough to overlap neighbouring sites' signals, thus enabling 
+            user in motion to change transmitter without lossing connection.
+
+            <h2>Code division multiple access</h2>
+            Originally, only 832 frequencies were allocated for cell service. From that number, 42 were used for communication between towers, leaving 
+            790 for calls. As both inbound and outbound frequency were required, there were only 395 call channels. As no two neighbouring sites could use 
+            the same frequencies, each site had 56 call channels, meaning 52 users in a site range could use it simultaniously. While phone's popularity 
+            was increasing, so did the problems because of these limits, but were solved with "code division multiple access" (CDMA). <br>
+            This system allowed large number of users to simultaniously use the same cell site or tower. It allocates unique code, so called 
+            "spreading code" to each user. Binary codes sent by all users together with their spreading codes are, using mathematical operations and 
+            algorythms, converted into a single binary sequence transmitted between towers. When signal is received, same operations are reversed, 
+            breaking single sequence into data sent by multiple users. <br><br>
+            Today, we use our phones and internet thanks to these principles, and switch to faster and faster networks thanks to the ingenuity of 
+            people finding new ways to send more data using the same resources. 
+        </article>
+
+        <footer>
+            <div class="media">
+                <a href="https://pavle.tk/"><i class="fa-solid fa-user"></i></a>
+                <a target="_blank" href="mailto:onlinitylearning@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://twitter.com/onlinityLearn/"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+            <p>Copyright © 2023 Pavle Ignjatović, Onlinity learning</p>
+          </footer>
+    </div>
+
+
+
+    <script>
+        let content = document.getElementById('wrap')
+        content.style.display = 'none'
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            content.style.display = 'block'
+        })
+
+
+
+
+        var navLinks = document.getElementById("menu")
+    
+        function showmenu(){
+            navLinks.style.display = "block"
+            navLinks.style.animation = "menuopen 1s"
+        }
+
+        function hidemenu(){
+            navLinks.style.animation = "menuclose 1s"
+            setTimeout(() => {
+                navLinks.style.display = 'none'
+            }, 900);
+        }
+
+
+
+        let currentDate = new Date(new Date().toUTCString())
+
+        let publishDate = new Date('July 28, 2023 07:00:00 GMT')
+
+
+        if (publishDate > currentDate){
+            window.location.replace('https://learning.onlinity.tk/not_ready/')
+        }
+    </script>
+
+    <script type="module">
+        import {recent} from "../recentArticle.js"
+
+        document.getElementById('mostRecentLink').href = '../' + recent
+    </script>
+</body>
+</html>
