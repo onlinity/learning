@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="post-style.css">
+    <link rel="shortcut icon" href="brand-images/icon.png">
+    <meta name="description" content="Welcome to Onlinity Learning.">
+    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning, electricity, generation, distribution, power grid, power">
+    <title>Onlinity Learning - How is weather predicted?</title>
+</head>
+<body>
+
+    <div class="showbox" id="preload">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav>
+            <a href="https://learning.onlinity.tk/"><img src="brand-images/Learning logo.svg" alt="logo"></a>
+            <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
+            <div id="menu">
+                <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
+                <a href="" id="mostRecentLink"><p>The most recent article</p></a>
+                <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
+                <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
+            </div>
+        </nav>
+    
+        <section id="recent">
+            <img src="images/weather.jpg" id="recentImg">
+            <div id="recentContent">
+                <div id="details">
+                    <p>August 7, 2023</p>
+                    <p>Pavle Ignjatović</p>
+                </div>
+                <h1>How is weather predicted?</h1>
+                <p id="recentDesc">
+                    How many times have you checked what the weather will be like on your phone, TV or radio in your car but never actually understood how someone knows that? You are not alone, and we will make sure you understand that at the end of this article.
+                </p>
+            </div>
+        </section>
+
+        <article>
+            Each morning, from more than 1,800 weather stations, latex balloons filled with helium and hydrogen are released. 
+            In the next two hours, these balloons will climb to an altitude of 30,000m (100,000ft), measure temperature, air 
+            pressure and humidity, and then send that data back to the station. <br> 
+            In addition to these, national meteorological agencies get data from planes, since they are already in the sky. 
+            Every aircraft is equipped with systems able to provide pilots with weather information necessary for a safe flight, 
+            so the World Meteorological Organisation has set up the Aircraft Meteorological Data Relay system which collects that 
+            information and includes it in Organisation's computer models.
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/weather-balloon.jpg">
+                <p>Launching weather balloon. Credits: https://bordmeldungen.de/2018/07/15/yopp/</p>
+            </div>
+        </section>
+
+        <article>
+            To make predictions more accurate, weather agencies have to factor in current conditions on the ground. 
+            That is why they set up surface observation systems all across the world, primarily at airports. 
+            These measure temperature, air pressure, humidity, cloud coverage and much more, automatically transmitting data 
+            to weather stations and pilots. <br><br>
+            Even though many needed measurements can be done using various systems, some of them need to be executed manually. 
+            For example, precipitation is measured by volunteers, who report data back to agencies. During severe storms, 
+            individuals drive through them driving cars equipped with sensors for measuring their intensity and trajectory. <br><br>
+            Oceans play a huge role in determining the weather, so monitoring them is of great importance. That is why buoys 
+            are stationed in all parts of Earth's oceans, sometimes thousands of kilometres from the nearest land. 
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/buoys.jpg">
+                <p>Weather buoys. Credits: https://www.geograph.org.uk/photo/5051186</p>
+            </div>
+        </section>
+
+        <article>
+            <h2>World Meteorological Organisation</h2>
+            Weather is global, so no country can predict its weather independently. That is why the World Meteorological 
+            Organisation exists. This United Nations agency has many goals, the most important of which is enabling efficient 
+            cooperation among its members. Data-sharing is mandatory for each of them, regardless of geopolitical status, 
+            meaning forecasts are accurate in all parts of the world.
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/wmo.png">
+                <p>World Meteorological Organisation. Credits: https://creazilla.com/nodes/3489977-flag-of-the-world-meteorological-organization-clipart?tag_id=18910489</p>
+            </div>
+        </section>
+
+        <article>
+            When data from all these sources is ready, it is used for generating weather models. These models can then be put 
+            into algorithms and equations that output maps of future weather conditions. To make this information available to 
+            the public, XML documents are generated and frequently refreshed. All mobile apps and websites have access to these 
+            files, and make forecasts available to users. In addition, many national agencies automatically broadcast data from 
+            these files on designated radio frequencies, thus making them reliable sources of information even when harsh weather 
+            disables all other ways of communication. <br><br>
+            Now you know what is needed in order for you to have an up-to-date weather forecast each time you want to know what 
+            to wear.
+        </article>
+
+        <footer>
+            <div class="media">
+                <a href="https://pavle.tk/"><i class="fa-solid fa-user"></i></a>
+                <a target="_blank" href="mailto:onlinitylearning@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://twitter.com/onlinityLearn/"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+            <p>Copyright © 2023 Pavle Ignjatović, Onlinity learning</p>
+          </footer>
+    </div>
+
+
+
+    <script>
+        let content = document.getElementById('wrap')
+        content.style.display = 'none'
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            content.style.display = 'block'
+        })
+
+
+
+
+        var navLinks = document.getElementById("menu")
+    
+        function showmenu(){
+            navLinks.style.display = "block"
+            navLinks.style.animation = "menuopen 1s"
+        }
+
+        function hidemenu(){
+            navLinks.style.animation = "menuclose 1s"
+            setTimeout(() => {
+                navLinks.style.display = 'none'
+            }, 900);
+        }
+
+
+
+        let currentDate = new Date(new Date().toUTCString())
+
+        let publishDate = new Date('August 7, 2023 07:00:00 GMT')
+
+
+        if (publishDate > currentDate){
+            window.location.replace('https://learning.onlinity.tk/not_ready/')
+        }
+    </script>
+
+    <script type="module">
+        import {recent} from "../recentArticle.js"
+
+        document.getElementById('mostRecentLink').href = '../' + recent
+    </script>
+</body>
+</html>
