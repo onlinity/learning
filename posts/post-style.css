@@ -411,6 +411,11 @@ html{
         line-height: 150%;
         margin-top: 0;
     }
+
+    /*Article width adjusted*/
+    section, article, #recent{
+        width: 75%;
+    }
 }
 
 article{
