@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="post-style.css">
+    <link rel="shortcut icon" href="brand-images/icon.png">
+    <meta name="description" content="Welcome to Onlinity Learning.">
+    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning, electricity, generation, distribution, power grid, power">
+    <title>Onlinity Learning - How does ATC work?</title>
+</head>
+<body>
+
+    <div class="showbox" id="preload">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav>
+            <a href="https://learning.onlinity.tk/"><img src="brand-images/Learning logo.svg" alt="logo"></a>
+            <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
+            <div id="menu">
+                <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
+                <a href="" id="mostRecentLink"><p>The most recent article</p></a>
+                <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
+                <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
+            </div>
+        </nav>
+    
+        <section id="recent">
+            <img src="images/airplane.jpg" id="recentImg">
+            <div id="recentContent">
+                <div id="details">
+                    <p>August 14, 2023</p>
+                    <p>Pavle Ignjatović</p>
+                </div>
+                <h1>How does Air Traffic Control work?</h1>
+                <p id="recentDesc">
+                    Introducing passenger planes made a revolution in the traffic industry. It made going to another part of the world unbelievably simple and quick. Almost 3 billion people travel by plane each year and that number continues to increase, so it is just the right time to learn the "behind the scenes" process of a flight.
+                </p>
+            </div>
+        </section>
+
+        <article>
+            Before the plane even takes off, the <b>route plan</b> is submitted to the local Network Management Operations Center (Eurocontrol for Europe, FAA for the USA, etc). 
+            There, it is run through a system to check if it obeys all airway rules. If it does not, they will communicate with an airline to correct it. 
+            Once the plan is approved, the plane is fueled and loaded, while waiting to get permission from the company dispatcher and ground control to proceed. 
+            Ground control navigates the plane to the runway, where it becomes the responsibility of the tower and is cleared for takeoff. <br><br>
+
+        When a plane takes off, the only obstacles in its way are other planes. To make sure there is no possibility of collision, there are certain rules pilots must 
+        follow, with the help of an ATC operator. There are three things an operator can instruct the pilot to do - change speed, altitude or direction. For this, 
+        they need to know the aircraft's location, using the <b>radar</b>. Radar is continuously sending radio waves into the sky. When they bounce off an aeroplane, 
+        the antenna detects the signal and calculates its position. This data is then transmitted to the <b>ATC tower</b> and displayed on operator screens. <br>
+        Since airspace is usually very complex and busy, controllers need to know their structure well. That is why it is both horizontally and vertically divided 
+        into zones, each having its own sets of personnel. <br><br>
+
+        Despite this, we all know that flights experience many delays. Those may be caused by the lack of controllers or too busy airspace zones. 
+        When a flight receives a delay, it has two options: to wait or to choose another, alternative route. This is done considering all additional 
+        costs and time needed. <br><br>
+
+        Now you know how numerous people work together to make sure all the flights arrive at their destination as safely and quickly as possible.
+        </article>
+
+
+        <aside id="aside">
+            <a class="twitter-timeline" href="https://twitter.com/onlinityLearn?ref_src=twsrc%5Etfw">Tweets by onlinityLearn</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </aside>
+
+        <footer>
+            <div class="media">
+                <a href="https://pavle.tk/"><i class="fa-solid fa-user"></i></a>
+                <a target="_blank" href="mailto:onlinitylearning@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://twitter.com/onlinityLearn/"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+            <p>Copyright © 2023 Pavle Ignjatović, Onlinity learning</p>
+        </footer>
+    </div>
+
+
+
+    <script>
+        let content = document.getElementById('wrap')
+        content.style.display = 'none'
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            content.style.display = 'block'
+        })
+
+
+
+
+        var navLinks = document.getElementById("menu")
+    
+        function showmenu(){
+            navLinks.style.display = "block"
+            navLinks.style.animation = "menuopen 1s"
+        }
+
+        function hidemenu(){
+            navLinks.style.animation = "menuclose 1s"
+            setTimeout(() => {
+                navLinks.style.display = 'none'
+            }, 900);
+        }
+
+
+
+        let currentDate = new Date(new Date().toUTCString())
+
+        let publishDate = new Date('August 7, 2023 07:00:00 GMT')
+
+
+        if (publishDate > currentDate){
+            window.location.replace('https://learning.onlinity.tk/not_ready/')
+        }
+    </script>
+
+    <script type="module">
+        import {recent} from "../recentArticle.js"
+
+        document.getElementById('mostRecentLink').href = '../' + recent
+    </script>
+</body>
+</html>
