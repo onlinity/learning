@@ -263,6 +263,11 @@ html{
         margin-top: 2rem;
     }
 
+    #aside{
+        display: none;
+    }
+
+
 }
 
 @media (width >= 600px){
@@ -416,6 +421,7 @@ html{
     section, article, #recent{
         width: 75%;
     }
+
 }
 
 article{
@@ -476,6 +482,14 @@ article{
     }
 }
 
+
+
+#aside{
+    width: 25%;
+    position: fixed;
+    top: 8rem;
+    right: 2rem;
+}
 
 
 
