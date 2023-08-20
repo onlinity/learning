@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="post-style.css">
+    <link rel="shortcut icon" href="brand-images/icon.png">
+    <meta name="description" content="Welcome to Onlinity Learning.">
+    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, onlinity learning, electricity, generation, distribution, power grid, power">
+    <title>Onlinity Learning - How are the roads built?</title>
+</head>
+<body>
+
+    <div class="showbox" id="preload">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav>
+            <a href="https://learning.onlinity.tk/"><img src="brand-images/Learning logo.svg" alt="logo"></a>
+            <i class="fa-solid fa-bars fa-lg" id="menuToggle" onclick="showmenu()"></i>
+            <div id="menu">
+                <i class="fa-solid fa-xmark fa-lg" id="menuClose" onclick="hidemenu()"></i>
+                <a href="" id="mostRecentLink"><p>The most recent article</p></a>
+                <a href="https://learning.onlinity.tk/contact/"><p>Contact</p></a>
+                <a href="https://learning.onlinity.tk/about/"><p>About us</p></a>
+            </div>
+        </nav>
+    
+        <section id="recent">
+            <img src="images/road.jpg" id="recentImg">
+            <div id="recentContent">
+                <div id="details">
+                    <p>August 21, 2023</p>
+                    <p>Pavle Ignjatović</p>
+                </div>
+                <h1>How are the roads built?</h1>
+                <p id="recentDesc">
+                    There are almost 1.5 billion cars in the world, around 1.4 billion drivers in the world, and 70 million car trips each day. Chances are you are also using some sort of transport daily. Yet few people think about what the process of building roads for all these vehicles looks like. So, let's have a look into it.
+                </p>
+            </div>
+        </section>
+
+        <article>
+            Laying down a road may seem like a simple task: there are two points, and you just need to connect them. But in reality, 
+            things are much more complicated. Roads have to go through forests, deserts and mountains, above rivers and lakes, and to 
+            be able to resist the weight of trucks, heavy rain or any other harsh weather conditions. <br><br>
+            <h2>Planning</h2>
+            Planning is the first step. In order to build a safe road, engineers need to pay attention to its geometry and materials used. 
+            Road geometry involves <b>cross section</b>, <b>alignment</b> and <b>profile</b>. <br>
+            The cross-section is what you would see if the road was cut across. Under the surface (usually made of asphalt) are layers of 
+            different materials, that improve the road's stability and drainage. Upon a closer look at the surface itself, it should be 
+            visible that it is not perfectly flat, but curved, to get rid of the water more quickly. In turns, the surface is bent at an 
+            angle, not only because of water, but also to help drivers by creating inward centripetal force. This force prevents them from 
+            slipping off the wet or icy road.
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/cross-section.jpg">
+                <p>Road cross section. Credits: https://commons.wikimedia.org/wiki/File:Green_St._cross_section.jpg</p>
+            </div>
+        </section>
+
+        <article>
+            For a good horizontal alignment, road turns must have a long enough radius to enable drivers to steer without going off 
+            the road while maintaining speed. <br>
+            Road profile is of great importance for heavier vehicles, as too steep road can make it hard for them to climb. For 
+            smaller vehicles, bigger problem is visibility. On too steep road, drivers can not see part of the road hidden behind 
+            the top, and their reaction time might be to slow to avoid the collision with other objects. <br>
+            Another part of planning is solving problems associated with natural obstacles, such as soil, mountains, rivers and lakes. 
+            Engineers decide whether tunnels or bridges are needed, and if they are, how long, wide or strong they need to be. Geologists 
+            analyse the soil and choose appropriate materials and measures for the construction. <br>
+            When planning is completed and approved by the authorities, construction starts. <br><br>
+
+            <h2>Construction</h2>
+            Construction starts with earthwork. Large machines create a solid foundation for the road to make sure it can last longer. 
+            After the foundation, the road is paved using the most suitable material considering multiple conditions, including the 
+            amount of traffic as one of the most important. When safety banks and signs are added, construction is finished. <br><br>
+        </article>
+
+        <section class="special noImage">
+            <div class="imageWrap">
+                <img src="images/road-construction.jpg">
+                <p>Road construction. </p>
+            </div>
+        </section>
+
+        <article>
+            Now you know. The process of building a safe and efficient road is much more complicated than most people think but as the 
+            number of cars grows, it continues to improve and increase in complexity.
+        </article>
+
+        <aside id="aside">
+            <a class="twitter-timeline" href="https://twitter.com/onlinityLearn?ref_src=twsrc%5Etfw">Tweets by onlinityLearn</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </aside>
+
+        <footer>
+            <div class="media">
+                <a href="https://pavle.tk/"><i class="fa-solid fa-user"></i></a>
+                <a target="_blank" href="mailto:onlinitylearning@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://twitter.com/onlinityLearn/"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+            <p>Copyright © 2023 Pavle Ignjatović, Onlinity learning</p>
+        </footer>
+    </div>
+
+
+
+    <script>
+        let content = document.getElementById('wrap')
+        content.style.display = 'none'
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+            content.style.display = 'block'
+        })
+
+
+
+
+        var navLinks = document.getElementById("menu")
+    
+        function showmenu(){
+            navLinks.style.display = "block"
+            navLinks.style.animation = "menuopen 1s"
+        }
+
+        function hidemenu(){
+            navLinks.style.animation = "menuclose 1s"
+            setTimeout(() => {
+                navLinks.style.display = 'none'
+            }, 900);
+        }
+
+
+
+        let currentDate = new Date(new Date().toUTCString())
+
+        let publishDate = new Date('August 21, 2023 07:00:00 GMT')
+
+
+        if (publishDate > currentDate){
+            window.location.replace('https://learning.onlinity.tk/not_ready/')
+        }
+    </script>
+
+    <script type="module">
+        import {recent} from "../recentArticle.js"
+
+        document.getElementById('mostRecentLink').href = '../' + recent
+    </script>
+</body>
+</html>
